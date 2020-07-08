@@ -1,15 +1,21 @@
-<?php
+<? php
 
-require __DIR__.'/public/index.php';
+/ **
+ * Laravel: un marco PHP para artesanos web
+ * *
+ * @package Laravel
+ * @autor Taylor Otwell <taylor@laravel.com>
+ * /
 
-/*****
-header("refresh: 5; http://solutionspc.tonohost.com/public/");
+$ uri = urldecode (
+    parse_url ( $ _SERVER [ 'REQUEST_URI' ], PHP_URL_PATH )
+);
 
-	echo '<title>Laravel Installed</title><div style="background: #e9ffed; border: 1px solid #b0dab7; padding: 15px;" align="center" >
-	<font size="5" color="#182e7a">Laravel is installed successfully.</font><br /><br />
-	<font size="4">Laravel is a Framework and doesn\'t have an index page.<br /><br />
-	You will be redirected to its "public" folder in 5 seconds...<br /><br />
-	Laravel is a clean and classy framework for PHP web development.
+// Este archivo nos permite emular la funcionalidad "mod_rewrite" de Apache desde
+// servidor web PHP incorporado. Esto proporciona una forma conveniente de probar un Laravel
+// aplicación sin haber instalado un software de servidor web "real" aquí.
+if ( $ uri ! == '/' && file_exists (__DIR__. '/ public' . $ uri )) {
+    devuelve  falso ;
+}
 
-Freeing you from spaghetti code, Laravel helps you create wonderful applications using simple, expressive syntax. Development should be a creative experience that you enjoy, not something that is painful. Enjoy the fresh air.
-</font></div>';**/
+require_once __DIR__. '/public/index.php' ;
