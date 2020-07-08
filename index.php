@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/public/index.php';
+require __DIR__.'/public/index.php';
 
 /*****
 header("refresh: 5; http://solutionspc.tonohost.com/public/");
@@ -13,4 +13,3 @@ header("refresh: 5; http://solutionspc.tonohost.com/public/");
 
 Freeing you from spaghetti code, Laravel helps you create wonderful applications using simple, expressive syntax. Development should be a creative experience that you enjoy, not something that is painful. Enjoy the fresh air.
 </font></div>';**/
-?>
